@@ -12,6 +12,7 @@
 		E58DC9A41D92978B00291DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A21D92978B00291DED /* Main.storyboard */; };
 		E58DC9A61D92978B00291DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A51D92978B00291DED /* Assets.xcassets */; };
 		E58DC9A91D92978B00291DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A71D92978B00291DED /* LaunchScreen.storyboard */; };
+		E58DC9B11D929AC300291DED /* CornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DC9B01D929AC300291DED /* CornersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E58DC9A51D92978B00291DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58DC9A81D92978B00291DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58DC9AA1D92978B00291DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E58DC9B01D929AC300291DED /* CornersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				E58DC99E1D92978B00291DED /* AppDelegate.swift */,
 				E58DC9A01D92978B00291DED /* ViewController.swift */,
+				E58DC9B01D929AC300291DED /* CornersView.swift */,
 				E58DC9A21D92978B00291DED /* Main.storyboard */,
 				E58DC9A51D92978B00291DED /* Assets.xcassets */,
 				E58DC9A71D92978B00291DED /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				E58DC9A11D92978B00291DED /* ViewController.swift in Sources */,
 				E58DC99F1D92978B00291DED /* AppDelegate.swift in Sources */,
+				E58DC9B11D929AC300291DED /* CornersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
