@@ -23,7 +23,15 @@ class BezierTestView: UIView {
     override func drawRect(rect: CGRect) {
         setupColors()
         
-        drawRectWithTopCurve()
+        drawRectWithTopArc()
+    }
+    
+    func drawCatHead() {
+        let path = UIBezierPath()
+        path.lineWidth = lineWidth
+        
+        path.fill()
+        path.stroke()
     }
 
     func drawRectWithTopCurve() {
@@ -58,10 +66,13 @@ class BezierTestView: UIView {
         path.lineWidth = lineWidth
         
         let halfSideLength = sideLength / 2
-        path.moveToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength))
-        path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + halfSideLength))
+        let bottomLeft = CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength)
+        let bottomRight = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength)
+        
+        path.moveToPoint(bottomLeft)
+        //path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + halfSideLength))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + halfSideLength, y: zeroPoint.y + halfSideLength), radius: halfSideLength, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI), clockwise: true)
-        path.addLineToPoint(CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength))
+        path.addLineToPoint(bottomRight)
         path.closePath()
         
         path.fill()
@@ -69,17 +80,19 @@ class BezierTestView: UIView {
     }
     
     func drawRectWithTopRoundedCorners() {
-        let cornerRadius: CGFloat = 20.0
-        
         let path = UIBezierPath()
         path.lineWidth = lineWidth
         
-        path.moveToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength))
-        path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + cornerRadius))
+        let cornerRadius: CGFloat = 20.0
+        let bottomLeft = CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength)
+        let bottomRight = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength)
+        
+        path.moveToPoint(bottomLeft)
+        //path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + cornerRadius))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + cornerRadius, y: zeroPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(3 * M_PI_2), clockwise: true)
-        path.addLineToPoint(CGPoint(x: zeroPoint.x + sideLength - cornerRadius, y: zeroPoint.y))
+        //path.addLineToPoint(CGPoint(x: zeroPoint.x + sideLength - cornerRadius, y: zeroPoint.y))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + sideLength - cornerRadius, y: zeroPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(3 * M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
-        path.addLineToPoint(CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength))
+        path.addLineToPoint(bottomRight)
         path.closePath()
         
         path.fill()
