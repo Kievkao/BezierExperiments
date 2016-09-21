@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(CornersView(frame: CGRect(x: 30, y: 50, width: 250, height: 250)))
+        view.addSubview(BezierTestView(frame: view.bounds))
     }
 
 }

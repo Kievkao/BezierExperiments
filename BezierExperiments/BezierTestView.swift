@@ -1,5 +1,5 @@
 //
-//  CornersView.swift
+//  BezierTestView.swift
 //  BezierExperiments
 //
 //  Created by Kravchenko, Andrii on 9/21/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CornersView: UIView {
+class BezierTestView: UIView {
     
     let zeroPoint = CGPoint(x: 50, y: 50)
     let sideLength: CGFloat = 150.0
@@ -23,9 +23,36 @@ class CornersView: UIView {
     override func drawRect(rect: CGRect) {
         setupColors()
         
-        drawRectWithTopRoundedCorners()
+        drawRectWithTopCurve()
     }
 
+    func drawRectWithTopCurve() {
+        let path = UIBezierPath()
+        path.lineWidth = lineWidth
+        
+        let curveHeight: CGFloat = 35.0
+        let cornerRadius: CGFloat = 20.0
+        
+        let bottomLeft = CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength)
+        let bottomRight = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength)
+        
+        let topLeftBeforeCurve = CGPoint(x: zeroPoint.x, y: zeroPoint.y + curveHeight)
+        let topRightAfterCurve = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + curveHeight)
+        
+        path.moveToPoint(bottomLeft)
+        path.addLineToPoint(topLeftBeforeCurve)
+        
+        let controlPoint = CGPoint(x: zeroPoint.x + sideLength/2, y: zeroPoint.y + cornerRadius/2)
+        
+        path.addCurveToPoint(topRightAfterCurve, controlPoint1: controlPoint, controlPoint2: controlPoint)
+        
+        path.addLineToPoint(bottomRight)
+        path.closePath()
+        
+        path.fill()
+        path.stroke()
+    }
+    
     func drawRectWithTopArc() {
         let path = UIBezierPath()
         path.lineWidth = lineWidth
