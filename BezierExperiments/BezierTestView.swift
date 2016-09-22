@@ -10,7 +10,7 @@ import UIKit
 
 class BezierTestView: UIView {
     
-    let zeroPoint = CGPoint(x: 50, y: 50)
+    let zeroPoint = CGPoint(x: 100, y: 50)
     let sideLength: CGFloat = 150.0
     
     let lineWidth: CGFloat = 3.0
@@ -23,7 +23,27 @@ class BezierTestView: UIView {
     override func drawRect(rect: CGRect) {
         setupColors()
         
-        drawCatHead()
+        drawMickeyMouse()
+    }
+    
+    func drawMickeyMouse() {
+        let path = UIBezierPath()
+        path.lineWidth = lineWidth
+        let earHeight: CGFloat = 45.0
+        let headCenter = CGPoint(x: zeroPoint.x + sideLength/2, y: zeroPoint.y + sideLength/2 + earHeight)
+        let headRadius = sideLength/2
+        
+        path.moveToPoint(CGPoint(x: zeroPoint.x + sideLength/2, y: zeroPoint.y + sideLength + earHeight))
+        path.addArcWithCenter(headCenter, radius: headRadius, startAngle: CGFloat(M_PI_2), endAngle: CGFloat(M_PI + M_PI_4/2), clockwise: true)
+        path.addArcWithCenter(CGPoint(x: zeroPoint.x, y: zeroPoint.y + earHeight), radius: earHeight, startAngle: CGFloat(M_PI - M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        
+        path.addArcWithCenter(headCenter, radius: headRadius, startAngle: CGFloat(M_PI + M_PI_4 + M_PI_4/2), endAngle: CGFloat(M_PI + M_PI_2 + M_PI_4/2), clockwise: true)
+        path.addArcWithCenter(CGPoint(x: headCenter.x + headRadius, y: zeroPoint.y + earHeight), radius: earHeight, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI + M_PI_2), clockwise: true)
+        
+        path.addArcWithCenter(headCenter, radius: headRadius, startAngle: CGFloat(-M_PI_4/2), endAngle: CGFloat(M_PI_2), clockwise: true)
+        
+        path.fill()
+        path.stroke()
     }
     
     func drawCatHead() {
@@ -83,7 +103,6 @@ class BezierTestView: UIView {
         let bottomRight = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength)
         
         path.moveToPoint(bottomLeft)
-        //path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + halfSideLength))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + halfSideLength, y: zeroPoint.y + halfSideLength), radius: halfSideLength, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI), clockwise: true)
         path.addLineToPoint(bottomRight)
         path.closePath()
@@ -96,14 +115,12 @@ class BezierTestView: UIView {
         let path = UIBezierPath()
         path.lineWidth = lineWidth
         
-        let cornerRadius: CGFloat = 20.0
+        let cornerRadius: CGFloat = 25.0
         let bottomLeft = CGPoint(x: zeroPoint.x, y: zeroPoint.y + sideLength)
         let bottomRight = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength)
         
         path.moveToPoint(bottomLeft)
-        //path.addLineToPoint(CGPoint(x: zeroPoint.x, y: zeroPoint.y + cornerRadius))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + cornerRadius, y: zeroPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(3 * M_PI_2), clockwise: true)
-        //path.addLineToPoint(CGPoint(x: zeroPoint.x + sideLength - cornerRadius, y: zeroPoint.y))
         path.addArcWithCenter(CGPoint(x: zeroPoint.x + sideLength - cornerRadius, y: zeroPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(3 * M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
         path.addLineToPoint(bottomRight)
         path.closePath()
