@@ -8,22 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E58DC99F1D92978B00291DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DC99E1D92978B00291DED /* AppDelegate.swift */; };
-		E58DC9A11D92978B00291DED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DC9A01D92978B00291DED /* ViewController.swift */; };
+		E58DC9A11D92978B00291DED /* DrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DC9A01D92978B00291DED /* DrawVC.swift */; };
 		E58DC9A41D92978B00291DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A21D92978B00291DED /* Main.storyboard */; };
 		E58DC9A61D92978B00291DED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A51D92978B00291DED /* Assets.xcassets */; };
 		E58DC9A91D92978B00291DED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58DC9A71D92978B00291DED /* LaunchScreen.storyboard */; };
-		E58DC9B11D929AC300291DED /* BezierTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58DC9B01D929AC300291DED /* BezierTestView.swift */; };
+		E5951EAD1D944AEE00DD4519 /* SelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EAC1D944AEE00DD4519 /* SelectionVC.swift */; };
+		E5951EB01D9453A400DD4519 /* TopRoundedCornersPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EAF1D9453A400DD4519 /* TopRoundedCornersPath.swift */; };
+		E5951EB21D9456AC00DD4519 /* TopArcPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB11D9456AC00DD4519 /* TopArcPath.swift */; };
+		E5951EB41D94575100DD4519 /* TopCurvePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB31D94575100DD4519 /* TopCurvePath.swift */; };
+		E5951EB61D945D9C00DD4519 /* CatHeadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */; };
+		E5951EB81D945E2B00DD4519 /* MickeyMousePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E58DC99B1D92978A00291DED /* BezierExperiments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BezierExperiments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58DC99E1D92978B00291DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E58DC9A01D92978B00291DED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E58DC9A01D92978B00291DED /* DrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawVC.swift; sourceTree = "<group>"; };
 		E58DC9A31D92978B00291DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E58DC9A51D92978B00291DED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58DC9A81D92978B00291DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58DC9AA1D92978B00291DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E58DC9B01D929AC300291DED /* BezierTestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierTestView.swift; sourceTree = "<group>"; };
+		E5951EAC1D944AEE00DD4519 /* SelectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionVC.swift; sourceTree = "<group>"; };
+		E5951EAF1D9453A400DD4519 /* TopRoundedCornersPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRoundedCornersPath.swift; sourceTree = "<group>"; };
+		E5951EB11D9456AC00DD4519 /* TopArcPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopArcPath.swift; sourceTree = "<group>"; };
+		E5951EB31D94575100DD4519 /* TopCurvePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCurvePath.swift; sourceTree = "<group>"; };
+		E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatHeadPath.swift; sourceTree = "<group>"; };
+		E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MickeyMousePath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,28 @@
 		E58DC99D1D92978B00291DED /* BezierExperiments */ = {
 			isa = PBXGroup;
 			children = (
-				E58DC99E1D92978B00291DED /* AppDelegate.swift */,
-				E58DC9A01D92978B00291DED /* ViewController.swift */,
-				E58DC9B01D929AC300291DED /* BezierTestView.swift */,
+				E5951EAE1D94539200DD4519 /* Paths */,
+				E5951EAC1D944AEE00DD4519 /* SelectionVC.swift */,
+				E58DC9A01D92978B00291DED /* DrawVC.swift */,
 				E58DC9A21D92978B00291DED /* Main.storyboard */,
+				E58DC99E1D92978B00291DED /* AppDelegate.swift */,
 				E58DC9A51D92978B00291DED /* Assets.xcassets */,
 				E58DC9A71D92978B00291DED /* LaunchScreen.storyboard */,
 				E58DC9AA1D92978B00291DED /* Info.plist */,
 			);
 			path = BezierExperiments;
+			sourceTree = "<group>";
+		};
+		E5951EAE1D94539200DD4519 /* Paths */ = {
+			isa = PBXGroup;
+			children = (
+				E5951EAF1D9453A400DD4519 /* TopRoundedCornersPath.swift */,
+				E5951EB11D9456AC00DD4519 /* TopArcPath.swift */,
+				E5951EB31D94575100DD4519 /* TopCurvePath.swift */,
+				E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */,
+				E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */,
+			);
+			name = Paths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E58DC9A11D92978B00291DED /* ViewController.swift in Sources */,
+				E58DC9A11D92978B00291DED /* DrawVC.swift in Sources */,
 				E58DC99F1D92978B00291DED /* AppDelegate.swift in Sources */,
-				E58DC9B11D929AC300291DED /* BezierTestView.swift in Sources */,
+				E5951EB61D945D9C00DD4519 /* CatHeadPath.swift in Sources */,
+				E5951EB41D94575100DD4519 /* TopCurvePath.swift in Sources */,
+				E5951EB01D9453A400DD4519 /* TopRoundedCornersPath.swift in Sources */,
+				E5951EB81D945E2B00DD4519 /* MickeyMousePath.swift in Sources */,
+				E5951EAD1D944AEE00DD4519 /* SelectionVC.swift in Sources */,
+				E5951EB21D9456AC00DD4519 /* TopArcPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +320,7 @@
 				E58DC9AF1D92978B00291DED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
