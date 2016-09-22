@@ -23,12 +23,25 @@ class BezierTestView: UIView {
     override func drawRect(rect: CGRect) {
         setupColors()
         
-        drawRectWithTopArc()
+        drawCatHead()
     }
     
     func drawCatHead() {
         let path = UIBezierPath()
         path.lineWidth = lineWidth
+        
+        let earRadius: CGFloat = 30.0
+        let topRightBeforeEar = CGPoint(x: zeroPoint.x + sideLength - earRadius, y: zeroPoint.y + earRadius)
+        let bottomRightBeforeChin = CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + sideLength/1.5)
+        
+        path.moveToPoint(zeroPoint)
+        path.addArcWithCenter(CGPoint(x: zeroPoint.x, y: zeroPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI + M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        path.addLineToPoint(topRightBeforeEar)
+        path.addArcWithCenter(CGPoint(x: zeroPoint.x + sideLength, y: zeroPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(M_PI + M_PI_2), clockwise: true)
+        path.addLineToPoint(bottomRightBeforeChin)
+        path.addArcWithCenter(CGPoint(x: zeroPoint.x + sideLength/2, y: zeroPoint.y + sideLength/1.5), radius: sideLength/2, startAngle: CGFloat(2 * M_PI), endAngle: CGFloat(M_PI), clockwise: true)
+        
+        path.closePath()
         
         path.fill()
         path.stroke()
