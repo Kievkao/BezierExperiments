@@ -24,23 +24,21 @@ class DrawVC: UIViewController {
     func setupDraw() {
         guard let demoType = self.demoType else { return }
         
-        let layer = DemoLayer()
-        
         switch demoType {
         case .TopRoundedCorners:
-            layer.path = TopRoundedCornersPath(zeroPoint: zeroPoint, cornerRadius: 25, shapeSideLength: sideLength).CGPath
+            addPathToDemoLayer(TopRoundedCornersPath(zeroPoint: zeroPoint, cornerRadius: 25, shapeSideLength: sideLength))
             
         case .TopArc:
-            layer.path = TopArcPath(zeroPoint: zeroPoint, shapeSideLength: sideLength).CGPath
+            addPathToDemoLayer(TopArcPath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
             
         case .TopCurve:
-            layer.path = TopCurvePath(zeroPoint: zeroPoint, shapeSideLength: sideLength).CGPath
+            addPathToDemoLayer(TopCurvePath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
             
         case .CatHead:
-            layer.path = CatHeadPath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 40).CGPath
+            addPathToDemoLayer(CatHeadPath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 40))
             
         case .MickeyMouse:
-            layer.path = MickeyMousePath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 45).CGPath
+            addPathToDemoLayer(MickeyMousePath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 45))
         
         case .AnimatePath:
             let path = AnimationPath(zeroPoint: zeroPoint, shapeSideLength: sideLength)
@@ -56,9 +54,12 @@ class DrawVC: UIViewController {
             view.addSubview(square)
             
             square.layer.addAnimation(anim, forKey: "bezierAnim")
-            
-            return
         }
+    }
+    
+    func addPathToDemoLayer(path: UIBezierPath) {
+        let layer = DemoLayer()
+        layer.path = path.CGPath
         
         view.layer.addSublayer(layer)
     }
@@ -72,7 +73,7 @@ class DemoLayer: CAShapeLayer {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)        
+        super.init(coder: aDecoder)
         setup()
     }
     
