@@ -9,7 +9,6 @@
         <!--DrawVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DrawVC" id="BYZ-38-t0r" customClass="DrawVC" customModule="BezierExperiments" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -22,6 +21,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KIl-oy-AQI"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1927" y="1112"/>
         </scene>
@@ -156,6 +156,27 @@
                                                 <constraint firstItem="6o7-6Z-aQk" firstAttribute="top" secondItem="ZLM-zo-AQ2" secondAttribute="topMargin" constant="3" id="Ri8-0u-jzV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="6o7-6Z-aQk" secondAttribute="bottom" constant="3" id="muo-X9-vOZ"/>
                                                 <constraint firstItem="6o7-6Z-aQk" firstAttribute="leading" secondItem="ZLM-zo-AQ2" secondAttribute="leadingMargin" id="w6B-a0-QBF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="oFH-7E-EyU">
+                                        <rect key="frame" x="0.0" y="284" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oFH-7E-EyU" id="PhU-JY-n6o">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animate path" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJq-g8-BCl">
+                                                    <rect key="frame" x="8" y="11" width="102" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gJq-g8-BCl" firstAttribute="top" secondItem="PhU-JY-n6o" secondAttribute="topMargin" constant="3" id="inY-iP-uBy"/>
+                                                <constraint firstItem="gJq-g8-BCl" firstAttribute="leading" secondItem="PhU-JY-n6o" secondAttribute="leadingMargin" id="mvE-6E-W7Y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gJq-g8-BCl" secondAttribute="bottom" constant="3" id="sWl-uT-nY0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

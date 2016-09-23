@@ -18,6 +18,7 @@
 		E5951EB41D94575100DD4519 /* TopCurvePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB31D94575100DD4519 /* TopCurvePath.swift */; };
 		E5951EB61D945D9C00DD4519 /* CatHeadPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */; };
 		E5951EB81D945E2B00DD4519 /* MickeyMousePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */; };
+		E5951EBA1D95152E00DD4519 /* AnimationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5951EB91D95152E00DD4519 /* AnimationPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E5951EB31D94575100DD4519 /* TopCurvePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCurvePath.swift; sourceTree = "<group>"; };
 		E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatHeadPath.swift; sourceTree = "<group>"; };
 		E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MickeyMousePath.swift; sourceTree = "<group>"; };
+		E5951EB91D95152E00DD4519 /* AnimationPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				E5951EB31D94575100DD4519 /* TopCurvePath.swift */,
 				E5951EB51D945D9C00DD4519 /* CatHeadPath.swift */,
 				E5951EB71D945E2B00DD4519 /* MickeyMousePath.swift */,
+				E5951EB91D95152E00DD4519 /* AnimationPath.swift */,
 			);
 			name = Paths;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				E5951EB41D94575100DD4519 /* TopCurvePath.swift in Sources */,
 				E5951EB01D9453A400DD4519 /* TopRoundedCornersPath.swift in Sources */,
 				E5951EB81D945E2B00DD4519 /* MickeyMousePath.swift in Sources */,
+				E5951EBA1D95152E00DD4519 /* AnimationPath.swift in Sources */,
 				E5951EAD1D944AEE00DD4519 /* SelectionVC.swift in Sources */,
 				E5951EB21D9456AC00DD4519 /* TopArcPath.swift in Sources */,
 			);

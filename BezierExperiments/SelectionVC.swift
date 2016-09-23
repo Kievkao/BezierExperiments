@@ -14,6 +14,7 @@ enum BezierDemoType: Int  {
     case TopCurve
     case CatHead
     case MickeyMouse
+    case AnimatePath
 }
 
 class SelectionVC: UITableViewController {
