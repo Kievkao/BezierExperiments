@@ -18,9 +18,9 @@ enum BezierDemoType: Int  {
 }
 
 class SelectionVC: UITableViewController {
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let drawVC = storyboard?.instantiateViewControllerWithIdentifier("DrawVC") as! DrawVC
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let drawVC = storyboard?.instantiateViewController(withIdentifier: "DrawVC") as! DrawVC
         drawVC.demoType = BezierDemoType(rawValue: indexPath.row)
         
         navigationController?.pushViewController(drawVC, animated: true)

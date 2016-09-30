@@ -15,12 +15,12 @@ class TopRoundedCornersPath: UIBezierPath {
         let bottomLeft = CGPoint(x: zPoint.x, y: zPoint.y + sideLength)
         let bottomRight = CGPoint(x: zPoint.x + sideLength, y: zPoint.y + sideLength)
         
-        moveToPoint(bottomLeft)
-        addArcWithCenter(CGPoint(x: zPoint.x + cornerRadius, y: zPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(3 * M_PI_2), clockwise: true)
-        addArcWithCenter(CGPoint(x: zPoint.x + sideLength - cornerRadius, y: zPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(3 * M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
-        addLineToPoint(bottomRight)
+        move(to: bottomLeft)
+        addArc(withCenter: CGPoint(x: zPoint.x + cornerRadius, y: zPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(3 * M_PI_2), clockwise: true)
+        addArc(withCenter: CGPoint(x: zPoint.x + sideLength - cornerRadius, y: zPoint.y + cornerRadius), radius: cornerRadius, startAngle: CGFloat(3 * M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        addLine(to: bottomRight)
         
-        closePath()
+        close()
     }
     
     required init?(coder aDecoder: NSCoder) {

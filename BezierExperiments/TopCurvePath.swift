@@ -20,17 +20,17 @@ class TopCurvePath: UIBezierPath {
         let topLeftBeforeCurve = CGPoint(x: zPoint.x, y: zPoint.y + curveHeight)
         let topRightAfterCurve = CGPoint(x: zPoint.x + sideLength, y: zPoint.y + curveHeight)
         
-        moveToPoint(bottomLeft)
-        addLineToPoint(topLeftBeforeCurve)
+        move(to: bottomLeft)
+        addLine(to: topLeftBeforeCurve)
         
         let controlPoint1 = CGPoint(x: zPoint.x + sideLength/3, y: zPoint.y + curveHeight/2)
         let controlPoint2 = CGPoint(x: zPoint.x + sideLength/3 * 2, y: zPoint.y + curveHeight/2)
         
-        addCurveToPoint(topRightAfterCurve, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
+        addCurve(to: topRightAfterCurve, controlPoint1: controlPoint1, controlPoint2: controlPoint2)
         
-        addLineToPoint(bottomRight)
+        addLine(to: bottomRight)
         
-        closePath()
+        close()
     }
     
     required init?(coder aDecoder: NSCoder) {

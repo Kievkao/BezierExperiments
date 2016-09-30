@@ -16,11 +16,11 @@ class TopArcPath: UIBezierPath {
         let bottomLeft = CGPoint(x: zPoint.x, y: zPoint.y + sideLength)
         let bottomRight = CGPoint(x: zPoint.x + sideLength, y: zPoint.y + sideLength)
         
-        moveToPoint(bottomLeft)
-        addArcWithCenter(CGPoint(x: zPoint.x + halfSideLength, y: zPoint.y + halfSideLength), radius: halfSideLength, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI), clockwise: true)
-        addLineToPoint(bottomRight)
+        move(to: bottomLeft)
+        addArc(withCenter: CGPoint(x: zPoint.x + halfSideLength, y: zPoint.y + halfSideLength), radius: halfSideLength, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        addLine(to: bottomRight)
         
-        closePath()
+        close()
     }
     
     required init?(coder aDecoder: NSCoder) {

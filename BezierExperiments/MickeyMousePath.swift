@@ -15,13 +15,13 @@ class MickeyMousePath: UIBezierPath {
         let headCenter = CGPoint(x: zPoint.x + sideLength/2, y: zPoint.y + sideLength/2 + earRadius)
         let headRadius = sideLength/2
         
-        addArcWithCenter(headCenter, radius: headRadius, startAngle: CGFloat(-M_PI_4/2), endAngle: CGFloat(M_PI + M_PI_4/2), clockwise: true)
-        addArcWithCenter(CGPoint(x: zPoint.x, y: zPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
+        addArc(withCenter: headCenter, radius: headRadius, startAngle: CGFloat(-M_PI_4/2), endAngle: CGFloat(M_PI + M_PI_4/2), clockwise: true)
+        addArc(withCenter: CGPoint(x: zPoint.x, y: zPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI_2), endAngle: CGFloat(2 * M_PI), clockwise: true)
         
-        addArcWithCenter(headCenter, radius: headRadius, startAngle: CGFloat(M_PI + M_PI_4 + M_PI_4/2), endAngle: CGFloat(M_PI + M_PI_2 + M_PI_4/2), clockwise: true)
-        addArcWithCenter(CGPoint(x: headCenter.x + headRadius, y: zPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI + M_PI_2), clockwise: true)
+        addArc(withCenter: headCenter, radius: headRadius, startAngle: CGFloat(M_PI + M_PI_4 + M_PI_4/2), endAngle: CGFloat(M_PI + M_PI_2 + M_PI_4/2), clockwise: true)
+        addArc(withCenter: CGPoint(x: headCenter.x + headRadius, y: zPoint.y + earRadius), radius: earRadius, startAngle: CGFloat(M_PI), endAngle: CGFloat(2 * M_PI + M_PI_2), clockwise: true)
         
-        closePath()
+        close()
     }
     
     required init?(coder aDecoder: NSCoder) {

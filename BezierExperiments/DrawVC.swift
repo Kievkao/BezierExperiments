@@ -26,40 +26,40 @@ class DrawVC: UIViewController {
         
         switch demoType {
         case .TopRoundedCorners:
-            addPathToDemoLayer(TopRoundedCornersPath(zeroPoint: zeroPoint, cornerRadius: 25, shapeSideLength: sideLength))
+            addPathToDemoLayer(path: TopRoundedCornersPath(zeroPoint: zeroPoint, cornerRadius: 25, shapeSideLength: sideLength))
             
         case .TopArc:
-            addPathToDemoLayer(TopArcPath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
+            addPathToDemoLayer(path: TopArcPath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
             
         case .TopCurve:
-            addPathToDemoLayer(TopCurvePath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
+            addPathToDemoLayer(path: TopCurvePath(zeroPoint: zeroPoint, shapeSideLength: sideLength))
             
         case .CatHead:
-            addPathToDemoLayer(CatHeadPath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 40))
+            addPathToDemoLayer(path: CatHeadPath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 40))
             
         case .MickeyMouse:
-            addPathToDemoLayer(MickeyMousePath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 45))
+            addPathToDemoLayer(path: MickeyMousePath(zeroPoint: zeroPoint, shapeSideLength: sideLength, earRadius: 45))
         
         case .AnimatePath:
             let path = AnimationPath(zeroPoint: zeroPoint, shapeSideLength: sideLength)
             
             let anim = CAKeyframeAnimation(keyPath: "position")
-            anim.path = path.CGPath
+            anim.path = path.cgPath
             anim.rotationMode = kCAAnimationRotateAuto
             anim.repeatCount = Float.infinity
             anim.duration = 4.0
             
             let square = UIView(frame: CGRect(x: 20, y: 100, width: 50, height: 50))
-            square.backgroundColor = UIColor.redColor()
+            square.backgroundColor = UIColor.red
             view.addSubview(square)
             
-            square.layer.addAnimation(anim, forKey: "bezierAnim")
+            square.layer.add(anim, forKey: "bezierAnim")
         }
     }
     
     func addPathToDemoLayer(path: UIBezierPath) {
         let layer = DemoLayer()
-        layer.path = path.CGPath
+        layer.path = path.cgPath
         
         view.layer.addSublayer(layer)
     }
@@ -78,8 +78,8 @@ class DemoLayer: CAShapeLayer {
     }
     
     private func setup() {
-        fillColor = UIColor.whiteColor().CGColor
-        strokeColor = UIColor.blackColor().CGColor
+        fillColor = UIColor.white.cgColor
+        strokeColor = UIColor.black.cgColor
         lineWidth = 3.0
     }
 }
